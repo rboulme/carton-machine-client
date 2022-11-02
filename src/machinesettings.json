@@ -1,0 +1,30 @@
+{
+    "width": 2740,
+    "workorder":{
+      "rollWidth":1350,
+      "cuts":[],
+      "crises":[],
+      "error":false,
+      "orders":[{"cnt":3,"wl1":100,"h":200,"wl2":100}]
+    },
+    "knives": [
+      {"name":"K1","pos1":233,"width":160,"pos":233,"minPos":233,"maxSupposedPos":1210},
+      {"name":"K2","pos1":393,"width":160,"pos":393,"maxSupposedPos":1400},
+      {"name":"K3","pos1":553,"width":160,"pos":553,"maxPos":1400,"maxSupposedPos":1400},
+      {"name":"K4","pos1":1420,"width":160,"pos":1420,"minPos":1420,"maxSupposedPos":2200},
+      {"name":"K5","pos1":1580,"width":160,"pos":1580,"maxSupposedPos":2360},
+      {"name":"K6","pos1":1740,"width":160,"pos":1740,"maxPos":2520,"maxSupposedPos":2520}
+    ],
+    "crisers": [
+      {"name":"C1","pos1":130,"width":130,"pos":130,"minPos":130,"maxSupposedPos":930},
+      {"name":"C2","pos1":260,"width":130,"pos":260,"maxSupposedPos":1060},
+      {"name":"C3","pos1":390,"width":130,"pos":390,"maxSupposedPos":1190},
+      {"name":"C4","pos1":520,"width":130,"pos":520,"maxSupposedPos":1320},
+      {"name":"C5","pos1":1160,"width":130,"pos":1160,"maxPos":1450,"maxSupposedPos":1450},
+      {"name":"C6","pos1":1290,"width":130,"pos":1290,"minPos":1050,"maxSupposedPos":1970},
+      {"name":"C7","pos1":1420,"width":130,"pos":1420,"maxSupposedPos":2100},
+      {"name":"C8","pos1":1550,"width":130,"pos":1550,"maxSupposedPos":2230},
+      {"name":"C9","pos1":1680,"width":130,"pos":1680,"maxSupposedPos":2360},
+      {"name":"C10","pos1":1810,"width":130,"pos":1810,"maxPos":2490,"maxSupposedPos":2490}
+    ]
+  }
