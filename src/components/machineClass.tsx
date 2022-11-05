@@ -10,7 +10,8 @@ export type MotionObjectType = {
     maxSupposedPos:number,
     excluded?:boolean,
     posComplete?:boolean,
-    pos1:number;
+    pos1:number,
+    currentPosAddress:number,
     
 }
 //========================================================================================================
@@ -137,7 +138,7 @@ export class MotionObjectClass{
     
 
     public get atHome(): boolean {
-        return this.pos == this.minPos;
+        return this.pos == this.pos1;
     }
     public get pos(): number {
 
@@ -145,14 +146,14 @@ export class MotionObjectClass{
 
     }
     public set pos(value: number){
-        if(value<this.minPos) {
-            alert(`${this.name} minPos Exeeded ${value}`);
-            return;
-        }
-        if(value>this.maxPos){
-            alert(`${this.name} maxPos Exeeded ${value}`);
-            return;
-        }
+        // if(value<this.minPos) {
+        //     alert(`${this.name} minPos Exeeded ${value}`);
+        //     return;
+        // }
+        // if(value>this.maxPos){
+        //     alert(`${this.name} maxPos Exeeded ${value}`);
+        //     return;
+        // }
         this.object.pos = value 
         if(this._machineObj&&this._setMachineHook)this._setMachineHook({...this._machineObj}) 
     }
@@ -160,7 +161,8 @@ export class MotionObjectClass{
         this.posComplete = false;
         this.excluded = false;
         // if(this.atHome) return;
-        this.pos = this.minPos;
+        this.object.pos = this.object.pos1;
+        if(this._machineObj&&this._setMachineHook)this._setMachineHook({...this._machineObj});
     }
     jogL(){
         this.pos = this.pos-1;
@@ -246,8 +248,12 @@ export class MachineClass {
         if(this._setMachineHook)this._setMachineHook({...this.obj})
     }
     home(){
-        this.knives.forEach(k=>k.home());
-        this.crisers.forEach(c=>c.home());
+        for(let i=0;i<this.knives.length;i++){
+            this.knives[i].home();
+        }
+        for(let i=0;i<this.knives.length;i++){
+            this.crisers[i].home();
+        }
         if(this._setMachineHook)this._setMachineHook({...this.obj})
     }
     moveAllRight(){
@@ -314,9 +320,6 @@ export function MachineDiv({machine,factor}:MachineDivProps){
             <Roll machine={machine} factor={factor}/>
             {machine.knives.map(k=><MotionObjDiv obj={k} factor={factor}/>)}
             {machine.crisers.map(c=><MotionObjDiv obj={c} factor={factor}/>)}
-
-            
-            
         </div>
     )
 

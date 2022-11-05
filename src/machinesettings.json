@@ -8,23 +8,23 @@
       "orders":[{"cnt":3,"wl1":100,"h":200,"wl2":100}]
     },
     "knives": [
-      {"name":"K1","pos1":233,"width":160,"pos":233,"minPos":233,"maxSupposedPos":1210},
-      {"name":"K2","pos1":393,"width":160,"pos":393,"maxSupposedPos":1400},
-      {"name":"K3","pos1":553,"width":160,"pos":553,"maxPos":1400,"maxSupposedPos":1400},
-      {"name":"K4","pos1":1420,"width":160,"pos":1420,"minPos":1420,"maxSupposedPos":2200},
-      {"name":"K5","pos1":1580,"width":160,"pos":1580,"maxSupposedPos":2360},
-      {"name":"K6","pos1":1740,"width":160,"pos":1740,"maxPos":2520,"maxSupposedPos":2520}
+      {"name":"K1","pos1":234,"width":155,"pos":234,"minPos":234,"maxSupposedPos":1090,"currentPosAddress":0},
+      {"name":"K2","pos1":391,"width":155,"pos":391,"maxSupposedPos":1245,"currentPosAddress":4},
+      {"name":"K3","pos1":545,"width":155,"pos":545,"maxPos":1400,"maxSupposedPos":1400,"currentPosAddress":8},
+      {"name":"K4","pos1":1419,"width":160,"pos":1419,"minPos":1419,"maxSupposedPos":2203,"currentPosAddress":16},
+      {"name":"K5","pos1":1579,"width":157,"pos":1579,"maxSupposedPos":2363,"currentPosAddress":20},
+      {"name":"K6","pos1":1736,"width":220,"pos":1736,"maxPos":2520,"maxSupposedPos":2520,"currentPosAddress":24}
     ],
     "crisers": [
-      {"name":"C1","pos1":130,"width":130,"pos":130,"minPos":130,"maxSupposedPos":930},
-      {"name":"C2","pos1":260,"width":130,"pos":260,"maxSupposedPos":1060},
-      {"name":"C3","pos1":390,"width":130,"pos":390,"maxSupposedPos":1190},
-      {"name":"C4","pos1":520,"width":130,"pos":520,"maxSupposedPos":1320},
-      {"name":"C5","pos1":1160,"width":130,"pos":1160,"maxPos":1450,"maxSupposedPos":1450},
-      {"name":"C6","pos1":1290,"width":130,"pos":1290,"minPos":1050,"maxSupposedPos":1970},
-      {"name":"C7","pos1":1420,"width":130,"pos":1420,"maxSupposedPos":2100},
-      {"name":"C8","pos1":1550,"width":130,"pos":1550,"maxSupposedPos":2230},
-      {"name":"C9","pos1":1680,"width":130,"pos":1680,"maxSupposedPos":2360},
-      {"name":"C10","pos1":1810,"width":130,"pos":1810,"maxPos":2490,"maxSupposedPos":2490}
+      {"name":"C1","pos1":131,"width":120,"pos":131,"minPos":131,"maxSupposedPos":933,"currentPosAddress":32},
+      {"name":"C2","pos1":255,"width":120,"pos":255,"maxSupposedPos":1064,"currentPosAddress":36},
+      {"name":"C3","pos1":384,"width":120,"pos":384,"maxSupposedPos":1192,"currentPosAddress":40},
+      {"name":"C4","pos1":511,"width":120,"pos":511,"maxSupposedPos":1318,"currentPosAddress":44},
+      {"name":"C5","pos1":644,"width":120,"pos":644,"maxPos":1450,"maxSupposedPos":1450,"currentPosAddress":12},
+      {"name":"C6","pos1":1167,"width":120,"pos":1167,"minPos":1167,"maxSupposedPos":1970,"currentPosAddress":28},
+      {"name":"C7","pos1":1291,"width":120,"pos":1291,"maxSupposedPos":2093,"currentPosAddress":48},
+      {"name":"C8","pos1":1419,"width":120,"pos":1419,"maxSupposedPos":2222,"currentPosAddress":52},
+      {"name":"C9","pos1":1545,"width":120,"pos":1545,"maxSupposedPos":2347,"currentPosAddress":56},
+      {"name":"C10","pos1":1674,"width":120,"pos":1674,"maxPos":2490,"maxSupposedPos":2472,"currentPosAddress":60}
     ]
   }
