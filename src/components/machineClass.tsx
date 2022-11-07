@@ -117,9 +117,22 @@ export class MotionObjectClass{
             minPos2 = this.prevClass.pos +this.width;
         if((minPos1==1000)&&(minPos2==1000))
             alert(`${this.name} min Pos undefined`)
-        if(minPos1 == 1000) return minPos2;
+        let pos1 = this.object.pos1;
+        if(minPos1 == 1000){
+            if(pos1>minPos2)
+                return pos1;
+            return minPos2
+        }
         if(minPos2 == 1000) return minPos1;
-        return Math.max(minPos1,minPos2);            
+        return  Math.max(minPos1,minPos2);
+        
+
+        // let _minPos = this.object.pos1; 
+        // if(minPos1 == 1000) if(minPos2>_minPos) return minPos2; 
+        // if(minPos2 == 1000) if(minPos1>_minPos) return minPos1;
+        // let _min =  Math.max(minPos1,minPos2);
+        // if(_min>_minPos) return _min;
+        // return _minPos;              
     }
     public get maxPos(): number {
         let maxPos1:number = 0; 

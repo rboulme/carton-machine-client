@@ -12,7 +12,7 @@ export function MotionMonitorDiv({obj,factor,d0Arr}:MotionMonitorDivProps){
     let clr:string = obj.name.startsWith('K')?'#0F0':'#FF0';
     
     let posSddress:number =  obj.currentPosAddress;
-
+    if(!d0Arr) return null;
     let currentPos = (posSddress<d0Arr.length-1)? d0Arr[posSddress]:0; 
     if(obj.excluded) clr = '#F00';
     return(

@@ -19,7 +19,7 @@ export function handleOrder(machine:MachineType,setMachine:(m:MachineType)=>void
     let crises:number[]=[];
     
     let totalW:number = 0;
-+    orderInputs.forEach(oi=>{
+    orderInputs.forEach(oi=>{
         for(let i=0;i<oi.cnt;i++){
             const newCutOrder:CutOrder ={w1:oi.wl1,h:oi.h,w2:oi.wl2}
             cutOrders.push(newCutOrder);
