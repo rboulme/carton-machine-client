@@ -8,7 +8,7 @@ import {OpenWith,Home, CameraRoll, ListAlt, Approval, Architecture, AlignHorizon
 import { JogToolBar } from './components/jogToolBar';
 import { OrderToolBar } from './components/orderToolBar';
 import { applyOrder, handleOrder } from './components/Roll';
-import macSettings from './machinesettings.json';
+import macSettings from './machinesettings_.json';
 import http from './components/connection';
 import { ToastContainer } from 'react-toastify';
 import { MachineMonitorDiv } from './components/machineMonitor';
@@ -24,10 +24,8 @@ function App() {
     
   const machineClass:MachineClass = new MachineClass(machine);
   machineClass.setMachineHook = setMachine;
-  // setInterval(async()=>{
-  //   d200Arr = await http.readDs(200,50);
-  //   console.log('d200Arr',d200Arr); 
-  // },1000)
+  useEffect(()=>{setMachine(macSettings)},[])
+
   async function update(){
     console.log('reading');
     const d:any[] = await http.readDs(0,100);
@@ -131,10 +129,13 @@ function App() {
           onClick={async()=>{
             let arr:number[] = [];
             machine.knives.forEach(k=>{
-              arr.push(k.pos - k.pos1)
+              let diff:number = (k.diff)?k.diff:0; 
+              arr.push(k.pos - k.pos1 + diff)
             })
+
             machine.crisers.forEach(c=>{
-              arr.push(c.pos - c.pos1)
+              let diff:number = (c.diff)?c.diff:0; 
+              arr.push(c.pos - c.pos1 + diff)
             })
             machine.knives.forEach(k=>{
               arr.push(k.excluded?1:2)
@@ -175,7 +176,7 @@ function App() {
 
       <MachineMonitorDiv machine={machine} factor={0.4} d0Arr={d0Arr}/>
       
-      <MachineDiv machine={machine} factor={0.4}/>;
+      <MachineDiv machine={machine} factor={0.4}/>
       
     </div>
     </React.Fragment>

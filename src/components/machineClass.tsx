@@ -12,6 +12,7 @@ export type MotionObjectType = {
     posComplete?:boolean,
     pos1:number,
     currentPosAddress:number,
+    diff?:number,
     
 }
 //========================================================================================================
@@ -114,7 +115,7 @@ export class MotionObjectClass{
             minPos1 = this.object.minPos;
         let minPos2:number = 1000;
         if(this.prevClass)
-            minPos2 = this.prevClass.pos +this.width;
+            minPos2 = this.prevClass.pos +this.prevClass.width;
         if((minPos1==1000)&&(minPos2==1000))
             alert(`${this.name} min Pos undefined`)
         let pos1 = this.object.pos1;
@@ -284,6 +285,9 @@ interface MotionObjDivProps{
 export function MotionObjDiv({obj,factor}:MotionObjDivProps){
     let clr:string = obj.name.startsWith('K')?'#0F0':'#FF0';
     if(obj.excluded) clr = '#F00';
+    const pos1:number = obj.pos1?obj.pos1:0;
+    const diff:number = (obj.diff)?obj.diff:0;
+    const finalPos:number = obj.pos-pos1+diff;
     return(
         <div
         key ={obj.name}
@@ -308,7 +312,9 @@ export function MotionObjDiv({obj,factor}:MotionObjDivProps){
             <small>{obj.name}</small>
             {!obj.posComplete&&<small>{obj.pos}</small>}
             {obj.posComplete&&<small><b>{obj.pos}</b></small>}
-            {obj.pos1&&<small className="text-primary"><b>{obj.pos-obj.pos1}</b></small>}
+            {obj.pos1&&<small className="text-secondary">{obj.pos1}</small>}
+            {/* {obj.diff&&<small className="text-warning">{obj.diff}</small>} */}
+            <small className="text-primary"><b>{finalPos}</b></small>
             
         </div>
     )

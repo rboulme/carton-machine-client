@@ -1,0 +1,30 @@
+{
+    "width": 2740,
+    "workorder":{
+      "rollWidth":1350,
+      "cuts":[],
+      "crises":[],
+      "error":false,
+      "orders":[{"cnt":3,"wl1":100,"h":200,"wl2":100}]
+    },
+    "knives": [
+      {"name":"K1","pos1":234,"width":170,"pos":234,"minPos":234,"maxSupposedPos":1090,"currentPosAddress":0,"diff":0},
+      {"name":"K2","pos1":391,"width":170,"pos":391,"maxSupposedPos":1245,"currentPosAddress":4,"diff":0},
+      {"name":"K3","pos1":546,"width":170,"pos":546,"maxPos":1400,"maxSupposedPos":1400,"currentPosAddress":8,"diff":0},
+      {"name":"K4","pos1":1417,"width":170,"pos":1417,"minPos":1417,"maxSupposedPos":2203,"currentPosAddress":16,"diff":0},
+      {"name":"K5","pos1":1577,"width":170,"pos":1577,"maxSupposedPos":2363,"currentPosAddress":20,"diff":0},
+      {"name":"K6","pos1":1737,"width":215,"pos":1737,"maxPos":2520,"maxSupposedPos":2520,"currentPosAddress":24,"diff":0}
+    ],
+    "crisers": [
+      {"name":"C1","pos1":132,"width":122,"pos":132,"minPos":132,"maxSupposedPos":933,"currentPosAddress":32,"diff":0},
+      {"name":"C2","pos1":252,"width":122,"pos":252,"maxSupposedPos":1064,"currentPosAddress":36,"diff":0},
+      {"name":"C3","pos1":373,"width":122,"pos":373,"maxSupposedPos":1192,"currentPosAddress":40,"diff":0},
+      {"name":"C4","pos1":495,"width":122,"pos":495,"maxSupposedPos":1318,"currentPosAddress":44,"diff":0},
+      {"name":"C5","pos1":613,"width":122,"pos":613,"maxPos":1450,"maxSupposedPos":1450,"currentPosAddress":12,"diff":0},
+      {"name":"C6","pos1":1167,"width":122,"pos":1167,"minPos":1167,"maxSupposedPos":2000,"currentPosAddress":28,"diff":0},
+      {"name":"C7","pos1":1287,"width":122,"pos":1287,"maxSupposedPos":2120,"currentPosAddress":48,"diff":0},
+      {"name":"C8","pos1":1409,"width":122,"pos":1409,"maxSupposedPos":2242,"currentPosAddress":52,"diff":0},
+      {"name":"C9","pos1":1528,"width":122,"pos":1528,"maxSupposedPos":2362,"currentPosAddress":56,"diff":0},
+      {"name":"C10","pos1":1648,"width":122,"pos":1648,"maxPos":2480,"maxSupposedPos":2480,"currentPosAddress":60,"diff":0}
+    ]
+  }
